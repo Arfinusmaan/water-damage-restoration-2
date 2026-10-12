@@ -281,119 +281,150 @@ export default function CuratedNavbar() {
 
       </div>
 
-      {/* Mobile Backdrop & Drawer with 100% Solid Dark Background */}
+      {/* Full-Screen Mobile Drawer with Solid Background */}
       {mobileMenuOpen && (
-        <>
-          <div 
-            className="lg:hidden fixed inset-0 z-40 bg-black/80 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-          />
-          <div 
-            className="lg:hidden fixed inset-x-0 top-[60px] bottom-0 z-50 p-6 flex flex-col justify-between border-t border-white/10 overflow-y-auto shadow-2xl"
-            style={{ backgroundColor: '#0B0E14' }}
-          >
-            <div className="space-y-6 pt-2">
-              
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `block text-xl font-serif tracking-wider ${
-                    isActive ? 'text-blue-400 font-medium' : 'text-neutral-300'
-                  }`
-                }
-              >
-                Overview
-              </NavLink>
-
-              {/* Services with sublinks */}
-              <div className="space-y-3">
-                <div className="text-xs font-mono uppercase tracking-widest text-blue-400">
-                  Specialized Services
-                </div>
-                <div className="pl-3 border-l border-white/15 space-y-2.5">
-                  {serviceLinks.map((srv) => (
-                    <NavLink
-                      key={srv.slug}
-                      to={`/services/${srv.slug}`}
-                      className={({ isActive }) =>
-                        `block text-sm font-sans ${
-                          isActive ? 'text-blue-400 font-semibold' : 'text-neutral-300'
-                        }`
-                      }
-                    >
-                      {srv.title}
-                    </NavLink>
-                  ))}
-                  <NavLink
-                    to="/services"
-                    className="block text-xs font-mono text-neutral-400 hover:text-white pt-1"
-                  >
-                    View All Services Overview →
-                  </NavLink>
-                </div>
+        <div 
+          className="lg:hidden fixed inset-0 z-[100] flex flex-col justify-between p-6 overflow-y-auto bg-[#0B0E14]"
+          style={{ backgroundColor: '#0B0E14' }}
+        >
+          {/* Top Bar with Brand Logo and Close Button */}
+          <div className="flex items-center justify-between pb-5 border-b border-white/10">
+            <Link 
+              to="/" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-3"
+            >
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#102C76] to-[#035BFD] border border-blue-400/30 flex items-center justify-center text-white font-serif font-bold text-sm shadow-md">
+                AV
               </div>
-
-              <NavLink
-                to="/equipment"
-                className={({ isActive }) =>
-                  `block text-xl font-serif tracking-wider ${
-                    isActive ? 'text-blue-400 font-medium' : 'text-neutral-300'
-                  }`
-                }
-              >
-                Equipment Fleet
-              </NavLink>
-
-              <NavLink
-                to="/protocol"
-                className={({ isActive }) =>
-                  `block text-xl font-serif tracking-wider ${
-                    isActive ? 'text-blue-400 font-medium' : 'text-neutral-300'
-                  }`
-                }
-              >
-                Restoration Protocol
-              </NavLink>
-
-              <NavLink
-                to="/cases"
-                className={({ isActive }) =>
-                  `block text-xl font-serif tracking-wider ${
-                    isActive ? 'text-blue-400 font-medium' : 'text-neutral-300'
-                  }`
-                }
-              >
-                Case Studies
-              </NavLink>
-
-              <NavLink
-                to="/emergency"
-                className={({ isActive }) =>
-                  `block text-xl font-serif tracking-wider ${
-                    isActive ? 'text-blue-400 font-medium' : 'text-neutral-300'
-                  }`
-                }
-              >
-                Emergency Dispatch Portal
-              </NavLink>
-
-            </div>
-
-            <div className="pt-6 border-t border-white/10 space-y-3 mt-6">
-              <div className="text-xs font-mono text-emerald-400 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-                24/7 Rapid Response Active
+              <div className="flex flex-col">
+                <span className="font-serif text-base tracking-[0.2em] font-medium text-white">
+                  AQUAVANT
+                </span>
+                <span className="text-[8px] tracking-[0.3em] text-neutral-400 font-mono uppercase">
+                  WATER RESTORATION
+                </span>
               </div>
-              <a
-                href="tel:18005550199"
-                className="flex items-center justify-center gap-2 w-full text-center py-3.5 rounded-full bg-blue-500 text-neutral-950 text-xs font-mono uppercase font-bold tracking-widest shadow-sm shadow-blue-500/25"
-              >
-                <PhoneCall size={14} />
-                Call (800) 555-0199
-              </a>
-            </div>
+            </Link>
+
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
+              aria-label="Close Menu"
+            >
+              <X size={24} />
+            </button>
           </div>
-        </>
+
+          {/* Navigation Links */}
+          <div className="space-y-5 py-6">
+            <NavLink
+              to="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className={({ isActive }) =>
+                `block text-xl font-serif tracking-wider ${
+                  isActive ? 'text-blue-400 font-medium' : 'text-neutral-200'
+                }`
+              }
+            >
+              Overview
+            </NavLink>
+
+            {/* Specialized Services */}
+            <div className="space-y-3">
+              <div className="text-xs font-mono uppercase tracking-widest text-blue-400">
+                Specialized Services
+              </div>
+              <div className="pl-3 border-l border-white/15 space-y-2.5">
+                {serviceLinks.map((srv) => (
+                  <NavLink
+                    key={srv.slug}
+                    to={`/services/${srv.slug}`}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={({ isActive }) =>
+                      `block text-sm font-sans ${
+                        isActive ? 'text-blue-400 font-semibold' : 'text-neutral-300'
+                      }`
+                    }
+                  >
+                    {srv.title}
+                  </NavLink>
+                ))}
+                <NavLink
+                  to="/services"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block text-xs font-mono text-neutral-400 hover:text-white pt-1"
+                >
+                  View All Services Overview →
+                </NavLink>
+              </div>
+            </div>
+
+            <NavLink
+              to="/equipment"
+              onClick={() => setMobileMenuOpen(false)}
+              className={({ isActive }) =>
+                `block text-xl font-serif tracking-wider ${
+                  isActive ? 'text-blue-400 font-medium' : 'text-neutral-200'
+                }`
+              }
+            >
+              Equipment Fleet
+            </NavLink>
+
+            <NavLink
+              to="/protocol"
+              onClick={() => setMobileMenuOpen(false)}
+              className={({ isActive }) =>
+                `block text-xl font-serif tracking-wider ${
+                  isActive ? 'text-blue-400 font-medium' : 'text-neutral-200'
+                }`
+              }
+            >
+              Restoration Protocol
+            </NavLink>
+
+            <NavLink
+              to="/cases"
+              onClick={() => setMobileMenuOpen(false)}
+              className={({ isActive }) =>
+                `block text-xl font-serif tracking-wider ${
+                  isActive ? 'text-blue-400 font-medium' : 'text-neutral-200'
+                }`
+              }
+            >
+              Case Studies
+            </NavLink>
+
+            <NavLink
+              to="/emergency"
+              onClick={() => setMobileMenuOpen(false)}
+              className={({ isActive }) =>
+                `block text-xl font-serif tracking-wider ${
+                  isActive ? 'text-blue-400 font-medium' : 'text-neutral-200'
+                }`
+              }
+            >
+              Emergency Dispatch Portal
+            </NavLink>
+          </div>
+
+          {/* Bottom Actions */}
+          <div className="pt-6 border-t border-white/10 space-y-3">
+            <div className="text-xs font-mono text-emerald-400 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+              24/7 Rapid Response Active
+            </div>
+            <a
+              href="tel:18005550199"
+              className="flex items-center justify-center gap-2 w-full text-center py-3.5 rounded-full bg-blue-500 text-neutral-950 text-xs font-mono uppercase font-bold tracking-widest shadow-md shadow-blue-500/25 active:scale-95"
+            >
+              <PhoneCall size={14} />
+              Call (800) 555-0199
+            </a>
+          </div>
+        </div>
       )}
     </header>
   );
