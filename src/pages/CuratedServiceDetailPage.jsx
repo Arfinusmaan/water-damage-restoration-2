@@ -126,7 +126,7 @@ export default function CuratedServiceDetailPage() {
                   <div className="flex items-center justify-between text-[11px] font-mono">
                     <span className="text-sky-400 uppercase tracking-widest">Active Mitigation Fleet</span>
                     <span className="text-emerald-400 flex items-center gap-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                       STANDBY
                     </span>
                   </div>

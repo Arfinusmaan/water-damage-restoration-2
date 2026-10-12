@@ -25,7 +25,7 @@ export default function CuratedContactPage() {
         
         <div className="max-w-3xl mb-16 space-y-4">
           <div className="flex items-center gap-2 text-[11px] font-mono tracking-[0.3em] uppercase text-sky-400">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
             <span>24/7 Emergency Dispatch Portal</span>
           </div>
           <h1 className="text-4xl sm:text-6xl font-serif text-white tracking-tight">
@@ -42,7 +42,7 @@ export default function CuratedContactPage() {
           <div className="lg:col-span-5 space-y-8">
             <div className="p-8 rounded-3xl border border-sky-400/30 bg-sky-950/20 space-y-6">
               <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
                 <span>Dispatchers Live On Duty</span>
               </div>
               <h3 className="text-2xl font-serif text-white">Call 24/7 Emergency Hotline</h3>

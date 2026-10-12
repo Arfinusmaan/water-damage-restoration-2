@@ -255,7 +255,7 @@ export default function CuratedWorksPage() {
         {/* Bottom Callout */}
         <div className="mt-20 p-8 sm:p-12 rounded-3xl border border-sky-400/30 bg-sky-950/20 text-center space-y-4">
           <div className="text-xs font-mono text-emerald-400 tracking-widest uppercase flex items-center justify-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
             24/7 Rapid Emergency Response Active
           </div>
           <h2 className="text-2xl sm:text-4xl font-serif text-white">

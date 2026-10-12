@@ -5,8 +5,6 @@ import {
   Activity, 
   Layers, 
   ShieldCheck, 
-  Volume2, 
-  VolumeX, 
   PhoneCall, 
   Clock, 
   MapPin, 
@@ -22,7 +20,6 @@ import gsap from 'gsap';
 import PanoramicSpreadHero from '@/components/ui/panoramic-spread-hero';
 
 export default function CuratedHomePage() {
-  const [isPlayingTelemetry, setIsPlayingTelemetry] = useState(false);
   const [selectedEquipment, setSelectedEquipment] = useState(0);
   const manifestoRef = useRef(null);
 
@@ -156,7 +153,7 @@ export default function CuratedHomePage() {
             {/* Left Column: Context Monogram & Coordinates (4 cols) */}
             <div className="lg:col-span-4 space-y-6">
               <div className="gsap-fade flex items-center gap-2 text-[11px] font-mono tracking-[0.3em] uppercase text-[var(--text-muted)]">
-                <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-sky-400"></span>
                 <span>Restoration Protocol · 01</span>
               </div>
 
@@ -484,48 +481,40 @@ export default function CuratedHomePage() {
       </section>
 
       {/* =========================================================================
-          SECTION 05: Psychrometric Acoustic & Moisture Telemetry Guide
-          Interactive minimal player
+          SECTION 05: Psychrometric Science & Moisture Verification
           ========================================================================= */}
       <section className="py-24 border-b border-[var(--border-color)] bg-[var(--bg-secondary)] relative">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           
-          <div className="rounded-3xl border border-[var(--border-color)] bg-[var(--bg-primary)]/80 p-8 sm:p-12  flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="space-y-3 max-w-xl text-center lg:text-left">
-              <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-[var(--text-muted)] flex items-center gap-2 justify-center lg:justify-start">
+          <div className="rounded-3xl border border-[var(--border-color)] bg-[var(--bg-primary)] p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div className="space-y-4 max-w-xl text-center lg:text-left">
+              <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-sky-400 flex items-center gap-2 justify-center lg:justify-start">
                 <Gauge size={14} className="text-sky-400" />
-                Psychrometric Live Telemetry
+                Psychrometric Science & Standards
               </span>
               <h3 className="text-2xl sm:text-3xl font-serif text-white">
-                Continuous Remote Moisture & Humidity Logging.
+                Continuous Remote Moisture & Humidity Verification.
               </h3>
               <p className="text-sm text-[var(--text-muted)] font-light leading-relaxed">
-                Our cellular hygrometer sensors log relative humidity, ambient temperature, and vapor pressure in real-time, verifying structural baseline moisture equilibrium before equipment extraction.
+                Our cellular hygrometer sensors log relative humidity, ambient temperature, and vapor pressure in real-time, verifying structural baseline moisture equilibrium before equipment extraction. Every reading is documented in line-item Xactimate reports for your insurance adjuster.
               </p>
             </div>
 
-            <div className="flex items-center gap-4">
-              <button
-                type="button"
-                onClick={() => setIsPlayingTelemetry(!isPlayingTelemetry)}
-                className="px-6 py-3.5 rounded-full bg-sky-400 text-neutral-950 text-xs font-mono font-bold tracking-widest uppercase hover:bg-sky-300 transition-colors flex items-center gap-3 cursor-pointer shadow-lg shadow-sky-500/20"
-              >
-                {isPlayingTelemetry ? (
-                  <>
-                    <VolumeX size={16} />
-                    <span>Pause Telemetry Audio</span>
-                  </>
-                ) : (
-                  <>
-                    <Volume2 size={16} />
-                    <span>Monitor Psychrometric Stream</span>
-                  </>
-                )}
-              </button>
-
-              <div className="hidden sm:flex items-center gap-2 px-4 py-3 rounded-full border border-sky-400/20 bg-sky-500/10 text-[11px] font-mono text-sky-300">
-                <span className={`w-2 h-2 rounded-full ${isPlayingTelemetry ? 'bg-emerald-400 animate-ping' : 'bg-neutral-600'}`}></span>
-                <span>{isPlayingTelemetry ? 'GPP 28 · RH 34% (NORMAL)' : 'CELLULAR LINK ONLINE'}</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full lg:w-auto">
+              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-center space-y-1">
+                <div className="text-xs font-mono text-sky-400 uppercase">Target WME</div>
+                <div className="text-2xl font-serif text-white">&lt; 12%</div>
+                <div className="text-[10px] font-mono text-[var(--text-muted)]">Subfloor Equilibrium</div>
+              </div>
+              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-center space-y-1">
+                <div className="text-xs font-mono text-emerald-400 uppercase">Chamber RH</div>
+                <div className="text-2xl font-serif text-white">&lt; 38%</div>
+                <div className="text-[10px] font-mono text-[var(--text-muted)]">Dehumidification</div>
+              </div>
+              <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 text-center space-y-1">
+                <div className="text-xs font-mono text-blue-400 uppercase">IICRC S500</div>
+                <div className="text-2xl font-serif text-white">100%</div>
+                <div className="text-[10px] font-mono text-[var(--text-muted)]">Carrier Compliance</div>
               </div>
             </div>
           </div>
@@ -580,7 +569,7 @@ export default function CuratedHomePage() {
           <div className="max-w-3xl mx-auto text-center space-y-8">
             
             <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-sky-400 flex items-center justify-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
               24/7 Emergency Dispatch · Teams Standing By
             </span>
 
