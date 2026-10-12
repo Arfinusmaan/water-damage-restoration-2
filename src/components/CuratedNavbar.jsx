@@ -79,8 +79,8 @@ export default function CuratedNavbar() {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-[#111111]/95 backdrop-blur-md border-b border-white/10 py-3.5 shadow-2xl shadow-black/80' 
-          : 'bg-[#111111]/70 backdrop-blur-sm border-b border-white/5 py-4'
+          ? 'bg-[#111111]/95  border-b border-white/10 py-3.5 shadow-sm shadow-black/80' 
+          : 'bg-[#111111]/70  border-b border-white/5 py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
@@ -89,7 +89,7 @@ export default function CuratedNavbar() {
             LEFT: Brand Logo & Monogram
             ===================================================================== */}
         <Link to="/" className="group flex items-center gap-3 text-white tracking-wider">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#102C76] to-[#035BFD] border border-blue-400/30 flex items-center justify-center text-white font-serif font-bold text-sm shadow-lg shadow-blue-600/25 group-hover:scale-105 transition-all">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#102C76] to-[#035BFD] border border-blue-400/30 flex items-center justify-center text-white font-serif font-bold text-sm shadow-lg shadow-blue-600/25 group- transition-all">
             AV
           </div>
           <div className="flex flex-col">
@@ -149,7 +149,7 @@ export default function CuratedNavbar() {
 
               {/* Mega Dropdown Menu */}
               {servicesDropdownOpen && (
-                <div className="absolute top-full right-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-[580px] rounded-2xl bg-[#141820] border border-white/15 p-5 shadow-2xl shadow-black/90 backdrop-blur-xl animate-in fade-in duration-200 z-50">
+                <div className="absolute top-full right-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-[580px] rounded-2xl bg-[#141820] border border-white/15 p-5 shadow-sm shadow-black/90  animate-in fade-in duration-200 z-50">
                   <div className="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-[10px] font-mono text-neutral-400">
                     <span className="text-blue-400 uppercase tracking-widest font-semibold">Specialized Protocols</span>
                     <Link to="/services" className="hover:text-white transition-colors flex items-center gap-1">
@@ -271,7 +271,7 @@ export default function CuratedNavbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[68px] bg-[#111111]/98 backdrop-blur-2xl z-40 p-6 flex flex-col justify-between border-t border-white/10 overflow-y-auto max-h-[calc(100vh-68px)]">
+        <div className="lg:hidden fixed inset-0 top-[68px] bg-[#111111]/98  z-40 p-6 flex flex-col justify-between border-t border-white/10 overflow-y-auto max-h-[calc(100vh-68px)]">
           <div className="space-y-6 pt-2">
             
             <NavLink
@@ -366,7 +366,7 @@ export default function CuratedNavbar() {
             </div>
             <a
               href="tel:18005550199"
-              className="flex items-center justify-center gap-2 w-full text-center py-3.5 rounded-full bg-blue-500 text-neutral-950 text-xs font-mono uppercase font-bold tracking-widest shadow-xl shadow-blue-500/25"
+              className="flex items-center justify-center gap-2 w-full text-center py-3.5 rounded-full bg-blue-500 text-neutral-950 text-xs font-mono uppercase font-bold tracking-widest shadow-sm shadow-blue-500/25"
             >
               <PhoneCall size={14} />
               Call (800) 555-0199

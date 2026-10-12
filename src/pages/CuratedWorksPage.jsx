@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Droplets, ShieldCheck, Gauge, CheckCircle2, PhoneCall, Sparkles, Eye, Camera } from 'lucide-react';
+import { ArrowUpRight, Droplets, ShieldCheck, Gauge, CheckCircle2, PhoneCall, Eye, Camera } from 'lucide-react';
 
 export default function CuratedWorksPage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -151,15 +151,15 @@ export default function CuratedWorksPage() {
                   <img 
                     src={item.image} 
                     alt={item.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" 
+                    className="w-full h-full object-cover group- transition-transform duration-500 filter brightness-95 group-hover:brightness-100" 
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent pointer-events-none" />
                   
                   <div className="absolute top-3 left-3 flex items-center gap-2">
-                    <span className="px-2.5 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-[9px] font-mono tracking-wider uppercase text-white border border-[var(--border-color)]">
+                    <span className="px-2.5 py-0.5 rounded-full bg-black/70  text-[9px] font-mono tracking-wider uppercase text-white border border-[var(--border-color)]">
                       {item.category}
                     </span>
-                    <span className="px-2.5 py-0.5 rounded-full bg-sky-500/20 backdrop-blur-md text-[9px] font-mono text-sky-300 border border-sky-400/20">
+                    <span className="px-2.5 py-0.5 rounded-full bg-sky-500/20  text-[9px] font-mono text-sky-300 border border-sky-400/20">
                       {item.year}
                     </span>
                   </div>
@@ -238,10 +238,10 @@ export default function CuratedWorksPage() {
                 <img 
                   src={photo.src} 
                   alt={photo.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" 
+                  className="w-full h-full object-cover group- transition-transform duration-500 filter brightness-90 group-hover:brightness-100" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-black/70 backdrop-blur-md text-[9px] font-mono uppercase text-sky-400 border border-[var(--border-color)]">
+                <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-black/70  text-[9px] font-mono uppercase text-sky-400 border border-[var(--border-color)]">
                   {photo.tag}
                 </div>
                 <div className="absolute bottom-3 left-3 right-3 text-xs font-mono text-white truncate">
@@ -264,7 +264,7 @@ export default function CuratedWorksPage() {
           <div className="pt-2">
             <a
               href="tel:18005550199"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-widest hover:bg-sky-300 transition-all shadow-xl shadow-sky-500/20"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-widest hover:bg-sky-300 transition-all shadow-sm shadow-sky-500/20"
             >
               <PhoneCall size={14} />
               <span>Call Emergency Hotline: (800) 555-0199</span>

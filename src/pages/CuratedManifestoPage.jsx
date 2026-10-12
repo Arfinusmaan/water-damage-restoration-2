@@ -7,7 +7,7 @@ export default function CuratedManifestoPage() {
     {
       num: '01',
       title: 'The Critical 60-Minute Golden Window',
-      desc: 'Standing water begins permeating drywall within 60 minutes and triggers exponential microbial sporulation by hour 48. Rapid dispatch within 15 minutes is not a luxury—it is structural triage.'
+      desc: 'Standing water begins permeating drywall within 60 minutes and triggers exponential microbial sporulation by hour 48. Rapid dispatch within 15 minutes is not a luxury - it is structural triage.'
     },
     {
       num: '02',
@@ -97,8 +97,8 @@ export default function CuratedManifestoPage() {
             ].map((p) => (
               <div key={p.step} className="group rounded-2xl overflow-hidden border border-[var(--border-color)] bg-[var(--bg-card)] flex flex-col justify-between">
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-800">
-                  <img src={p.src} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" />
-                  <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-sky-500/80 backdrop-blur-md text-[9px] font-mono font-bold text-neutral-950">
+                  <img src={p.src} alt={p.title} className="w-full h-full object-cover group- transition-transform duration-500 filter brightness-95" />
+                  <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-sky-500/80  text-[9px] font-mono font-bold text-neutral-950">
                     STEP {p.step}
                   </div>
                 </div>
@@ -152,7 +152,7 @@ export default function CuratedManifestoPage() {
           </div>
           <a
             href="tel:18005550199"
-            className="px-8 py-3.5 rounded-full bg-sky-400 text-neutral-950 text-xs font-mono uppercase tracking-widest font-bold hover:bg-sky-300 transition-colors shrink-0 flex items-center gap-2 shadow-xl shadow-sky-500/20"
+            className="px-8 py-3.5 rounded-full bg-sky-400 text-neutral-950 text-xs font-mono uppercase tracking-widest font-bold hover:bg-sky-300 transition-colors shrink-0 flex items-center gap-2 shadow-sm shadow-sky-500/20"
           >
             <PhoneCall size={14} />
             <span>Call (800) 555-0199</span>

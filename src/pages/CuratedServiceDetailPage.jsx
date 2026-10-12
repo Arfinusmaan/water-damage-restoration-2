@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { 
   PhoneCall, ArrowLeft, ArrowUpRight, CheckCircle2, AlertTriangle, ShieldCheck, 
-  Gauge, Wind, Droplets, ChevronDown, Layers, Clock, Sparkles, Wrench, Shield, FileText
+  Gauge, Wind, Droplets, ChevronDown, Layers, Clock, Wrench, Shield, FileText
 } from 'lucide-react';
 import { SERVICES } from '../data/servicesData';
 
@@ -82,7 +82,7 @@ export default function CuratedServiceDetailPage() {
               <div className="pt-4 flex flex-wrap items-center gap-4">
                 <a
                   href="tel:18005550199"
-                  className="px-8 py-4 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-widest hover:bg-sky-300 transition-all shadow-xl shadow-sky-500/20 flex items-center gap-2"
+                  className="px-8 py-4 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-widest hover:bg-sky-300 transition-all shadow-sm shadow-sky-500/20 flex items-center gap-2"
                 >
                   <PhoneCall size={14} />
                   <span>24/7 Dispatch Hotline: (800) 555-0199</span>
@@ -114,7 +114,7 @@ export default function CuratedServiceDetailPage() {
 
             {/* Right Hero Image Card (5 cols) */}
             <div className="lg:col-span-5">
-              <div className="relative rounded-3xl overflow-hidden border border-[var(--border-color)] bg-[var(--bg-card)] shadow-2xl shadow-black/80 aspect-[4/3] lg:aspect-[4/5]">
+              <div className="relative rounded-3xl overflow-hidden border border-[var(--border-color)] bg-[var(--bg-card)] shadow-sm shadow-black/80 aspect-[4/3] lg:aspect-[4/5]">
                 <img 
                   src={service.image || '/images/hero.jpg'} 
                   alt={service.title} 
@@ -122,7 +122,7 @@ export default function CuratedServiceDetailPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-transparent to-transparent pointer-events-none" />
                 
-                <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-[var(--bg-primary)]/80 backdrop-blur-md border border-[var(--border-color)] space-y-2">
+                <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-[var(--bg-primary)]/80  border border-[var(--border-color)] space-y-2">
                   <div className="flex items-center justify-between text-[11px] font-mono">
                     <span className="text-sky-400 uppercase tracking-widest">Active Mitigation Fleet</span>
                     <span className="text-emerald-400 flex items-center gap-1">
@@ -170,9 +170,9 @@ export default function CuratedServiceDetailPage() {
                   <img 
                     src={photo.src} 
                     alt={photo.caption} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95 group-hover:brightness-100" 
+                    className="w-full h-full object-cover group- transition-transform duration-500 filter brightness-95 group-hover:brightness-100" 
                   />
-                  <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-black/70 backdrop-blur-md text-[9px] font-mono uppercase text-sky-400 border border-[var(--border-color)]">
+                  <div className="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-black/70  text-[9px] font-mono uppercase text-sky-400 border border-[var(--border-color)]">
                     STAGE 0{i + 1}
                   </div>
                 </div>
@@ -348,7 +348,7 @@ export default function CuratedServiceDetailPage() {
                 </div>
                 <div className="mt-6 pt-4 border-t border-[var(--border-color)] flex items-center justify-between text-xs font-mono text-[var(--text-secondary)] group-hover:text-white">
                   <span>Explore Protocol</span>
-                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  <ArrowUpRight size={14} className="" />
                 </div>
               </Link>
             ))}

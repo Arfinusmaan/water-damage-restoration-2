@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
   Send, Phone, CheckCircle2, ShieldCheck, AlertCircle, 
-  Clock, Sparkles, Lock, X
+  Clock, Lock, X
 } from 'lucide-react';
 
 export const InquiryForm = ({ defaultService = "", onSuccess = () => {}, onClose = null }) => {
@@ -99,13 +99,13 @@ export const InquiryForm = ({ defaultService = "", onSuccess = () => {}, onClose
   }
 
   return (
-    <form onSubmit={handleSubmit} className="p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl space-y-5">
+    <form onSubmit={handleSubmit} className="p-6 sm:p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-sm space-y-5">
       
       {/* Form Header */}
       <div className="border-b border-slate-800 pb-4">
         <div className="flex items-center justify-between gap-2 mb-1">
           <span className="text-xs uppercase font-bold tracking-wider text-[#0066FF] flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5" />
+            
             <span>Rapid Disaster Triage</span>
           </span>
           <span className="text-[11px] font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-700/60 px-2.5 py-0.5 rounded-full">
@@ -261,7 +261,7 @@ export const InquiryForm = ({ defaultService = "", onSuccess = () => {}, onClose
       <button
         type="submit"
         disabled={loading}
-        className="w-full py-4 px-6 rounded-full bg-[#0066FF] hover:bg-[#0052cc] text-white font-black text-sm shadow-xl shadow-blue-600/30 flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.01] disabled:opacity-50 cursor-pointer"
+        className="w-full py-4 px-6 rounded-full bg-[#0066FF] hover:bg-[#0052cc] text-white font-black text-sm shadow-sm shadow-blue-600/30 flex items-center justify-center gap-2 transition-all duration-300 hover:scale-[1.01] disabled:opacity-50 cursor-pointer"
       >
         {loading ? (
           <span>Dispatching Crew...</span>

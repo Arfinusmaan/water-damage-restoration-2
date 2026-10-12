@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import CuratedNavbar from './components/CuratedNavbar';
@@ -11,6 +11,8 @@ import CuratedServiceDetailPage from './pages/CuratedServiceDetailPage';
 import CuratedMaterialityPage from './pages/CuratedMaterialityPage';
 import CuratedManifestoPage from './pages/CuratedManifestoPage';
 import CuratedContactPage from './pages/CuratedContactPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsOfServicePage from './pages/TermsOfServicePage';
 
 export default function App() {
   return (
@@ -40,6 +42,10 @@ export default function App() {
             {/* 24/7 Emergency Dispatch & Claim Intake */}
             <Route path="/emergency" element={<CuratedContactPage />} />
             <Route path="/inquire" element={<CuratedContactPage />} />
+            
+            {/* Real Legal Terms & Privacy */}
+            <Route path="/privacy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms" element={<TermsOfServicePage />} />
             
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

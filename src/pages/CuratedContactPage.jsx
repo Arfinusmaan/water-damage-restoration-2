@@ -52,7 +52,7 @@ export default function CuratedContactPage() {
 
               <a
                 href="tel:18005550199"
-                className="flex items-center justify-center gap-3 w-full py-4 rounded-full bg-sky-400 text-neutral-950 text-sm font-bold uppercase tracking-widest hover:bg-sky-300 transition-all shadow-xl shadow-sky-500/20"
+                className="flex items-center justify-center gap-3 w-full py-4 rounded-full bg-sky-400 text-neutral-950 text-sm font-bold uppercase tracking-widest hover:bg-sky-300 transition-all shadow-sm shadow-sky-500/20"
               >
                 <PhoneCall size={18} />
                 <span>(800) 555-0199</span>
@@ -202,7 +202,7 @@ export default function CuratedContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-[0.2em] hover:bg-sky-300 transition-all flex items-center justify-center gap-2 shadow-xl shadow-sky-500/20 cursor-pointer"
+                    className="w-full py-4 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-[0.2em] hover:bg-sky-300 transition-all flex items-center justify-center gap-2 shadow-sm shadow-sky-500/20 cursor-pointer"
                   >
                     <span>Dispatch Emergency Team Now</span>
                     <Send size={14} />

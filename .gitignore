@@ -59,3 +59,15 @@ Thumbs.db
 *.temp
 coverage/
 .nyc_output/
+
+# Agent & AI configuration
+.agents/
+.gemini/
+skills-lock.json
+
+# Internal documentation & design assets
+design.md
+DESIGN.md
+Color themes/
+color themes/
+scripts/

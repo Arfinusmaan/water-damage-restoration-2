@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { PhoneCall, ShieldCheck, Droplets, MapPin, ArrowUpRight } from 'lucide-react';
 
@@ -26,7 +26,7 @@ export default function CuratedFooter() {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="tel:18005550199"
-                className="flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-widest hover:bg-sky-300 transition-all shadow-xl shadow-sky-500/20"
+                className="flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-widest hover:bg-sky-300 transition-all shadow-sm shadow-sky-500/20"
               >
                 <PhoneCall size={16} />
                 <span>Call (800) 555-0199</span>
@@ -40,7 +40,7 @@ export default function CuratedFooter() {
               </Link>
             </div>
             <span className="text-[11px] font-mono text-[var(--text-muted)] mt-1">
-              Average On-Site Arrival: Under 45 Minutes · All Regional Zip Codes Covered
+              Average On-Site Arrival: Under 45 Minutes Â· All Regional Zip Codes Covered
             </span>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function CuratedFooter() {
               dispatch@aquavantrestoration.com
             </p>
             <div className="font-mono text-[10px] text-[var(--text-muted)]">
-              TRUCK FLEET UNITS: 01–06 (STANDBY)
+              TRUCK FLEET UNITS: 01â€“06 (STANDBY)
             </div>
           </div>
 
@@ -72,7 +72,7 @@ export default function CuratedFooter() {
               soundshore@aquavantrestoration.com
             </p>
             <div className="font-mono text-[10px] text-[var(--text-muted)]">
-              TRUCK FLEET UNITS: 07–12 (STANDBY)
+              TRUCK FLEET UNITS: 07â€“12 (STANDBY)
             </div>
           </div>
 
@@ -86,7 +86,7 @@ export default function CuratedFooter() {
               greenwich@aquavantrestoration.com
             </p>
             <div className="font-mono text-[10px] text-[var(--text-muted)]">
-              TRUCK FLEET UNITS: 13–18 (STANDBY)
+              TRUCK FLEET UNITS: 13â€“18 (STANDBY)
             </div>
           </div>
 
@@ -111,12 +111,12 @@ export default function CuratedFooter() {
             <div className="w-5 h-5 rounded-full border border-sky-400/30 flex items-center justify-center text-[9px] text-sky-400 font-serif">
               AV
             </div>
-            <span>© 2026 AQUAVANT RESTORATION SYSTEMS LLC. ALL RIGHTS RESERVED.</span>
+            <span>Â© 2026 AQUAVANT RESTORATION SYSTEMS LLC. ALL RIGHTS RESERVED.</span>
           </div>
           <div className="flex items-center gap-6">
             <span>IICRC FIRM #84920</span>
             <span>EPA CERTIFIED</span>
-            <span>DIRECT INSURANCE BILLED</span>
+            <Link to="/privacy" className="hover:text-white transition-colors">PRIVACY POLICY</Link><Link to="/terms" className="hover:text-white transition-colors">TERMS OF SERVICE</Link><span>DIRECT INSURANCE BILLED</span>
           </div>
         </div>
 
@@ -124,4 +124,5 @@ export default function CuratedFooter() {
     </footer>
   );
 }
+
 

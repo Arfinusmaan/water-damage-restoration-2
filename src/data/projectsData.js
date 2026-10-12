@@ -1,4 +1,4 @@
-// AQUAVANT RESTORATION — Signature Project Gallery Case Studies
+// AQUAVANT RESTORATION  -  Signature Project Gallery Case Studies
 
 export const PROJECTS = [
   {

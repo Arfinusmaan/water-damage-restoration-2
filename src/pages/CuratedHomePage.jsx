@@ -252,16 +252,16 @@ export default function CuratedHomePage() {
                     <img 
                       src={work.image} 
                       alt={work.title} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter brightness-95 group-hover:brightness-100" 
+                      className="w-full h-full object-cover group- transition-transform duration-700 filter brightness-95 group-hover:brightness-100" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent pointer-events-none" />
                     
                     {/* Top Floating Badges */}
                     <div className="absolute top-4 left-4 flex items-center gap-2">
-                      <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-mono tracking-widest uppercase text-white border border-[var(--border-color)]">
+                      <span className="px-3 py-1 rounded-full bg-black/60  text-[10px] font-mono tracking-widest uppercase text-white border border-[var(--border-color)]">
                         {work.location}
                       </span>
-                      <span className="px-2.5 py-1 rounded-full bg-sky-500/20 backdrop-blur-md text-[10px] font-mono text-sky-300 border border-sky-400/20">
+                      <span className="px-2.5 py-1 rounded-full bg-sky-500/20  text-[10px] font-mono text-sky-300 border border-sky-400/20">
                         {work.year}
                       </span>
                     </div>
@@ -302,7 +302,7 @@ export default function CuratedHomePage() {
 
                   <Link
                     to="/cases"
-                    className="mt-4 w-full inline-flex items-center justify-between text-xs font-mono tracking-widest uppercase text-[var(--text-secondary)] hover:text-sky-300 group-hover:translate-x-1 transition-all"
+                    className="mt-4 w-full inline-flex items-center justify-between text-xs font-mono tracking-widest uppercase text-[var(--text-secondary)] hover:text-sky-300  transition-all"
                   >
                     <span>Inspect Drying Telemetry & Logs</span>
                     <ArrowUpRight size={14} />
@@ -342,7 +342,7 @@ export default function CuratedHomePage() {
                 onClick={() => setSelectedEquipment(idx)}
                 className={`group rounded-2xl overflow-hidden border p-5 transition-all duration-300 cursor-pointer flex flex-col justify-between ${
                   selectedEquipment === idx
-                    ? 'border-sky-400 bg-sky-950/20 shadow-2xl shadow-sky-500/10'
+                    ? 'border-sky-400 bg-sky-950/20 shadow-sm shadow-sky-500/10'
                     : 'border-[var(--border-color)] bg-[var(--bg-secondary)] hover:border-white/30 hover:bg-white/5'
                 }`}
               >
@@ -351,9 +351,9 @@ export default function CuratedHomePage() {
                     <img 
                       src={eq.image} 
                       alt={eq.name} 
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                      className="w-full h-full object-cover group- transition-transform duration-500" 
                     />
-                    <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-black/70 backdrop-blur-md text-[9px] font-mono uppercase text-sky-400 border border-sky-400/20">
+                    <div className="absolute top-2.5 right-2.5 px-2 py-0.5 rounded bg-black/70  text-[9px] font-mono uppercase text-sky-400 border border-sky-400/20">
                       UNIT 0{idx + 1}
                     </div>
                   </div>
@@ -429,7 +429,7 @@ export default function CuratedHomePage() {
                 </div>
                 <div className="mt-6 pt-4 border-t border-[var(--border-color)] flex items-center justify-between text-xs font-mono text-[var(--text-secondary)] group-hover:text-white">
                   <span>Open Dedicated Page</span>
-                  <ArrowUpRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  <ArrowUpRight size={14} className="" />
                 </div>
               </Link>
             ))}
@@ -468,10 +468,10 @@ export default function CuratedHomePage() {
                 <img 
                   src={img.src} 
                   alt={img.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-90 group-hover:brightness-100" 
+                  className="w-full h-full object-cover group- transition-transform duration-500 filter brightness-90 group-hover:brightness-100" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
-                <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 backdrop-blur-md text-[8px] font-mono uppercase text-sky-400 border border-[var(--border-color)]">
+                <div className="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70  text-[8px] font-mono uppercase text-sky-400 border border-[var(--border-color)]">
                   {img.tag}
                 </div>
                 <div className="absolute bottom-2.5 left-2.5 right-2.5 text-[11px] font-mono text-white truncate">
@@ -490,7 +490,7 @@ export default function CuratedHomePage() {
       <section className="py-24 border-b border-[var(--border-color)] bg-[var(--bg-secondary)] relative">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           
-          <div className="rounded-3xl border border-[var(--border-color)] bg-[var(--bg-primary)]/80 p-8 sm:p-12 backdrop-blur-md flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="rounded-3xl border border-[var(--border-color)] bg-[var(--bg-primary)]/80 p-8 sm:p-12  flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-3 max-w-xl text-center lg:text-left">
               <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-[var(--text-muted)] flex items-center gap-2 justify-center lg:justify-start">
                 <Gauge size={14} className="text-sky-400" />
@@ -595,7 +595,7 @@ export default function CuratedHomePage() {
             <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="tel:18005550199"
-                className="px-8 py-4 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-[0.2em] hover:bg-sky-300 transition-all shadow-xl shadow-sky-500/20 flex items-center gap-2"
+                className="px-8 py-4 rounded-full bg-sky-400 text-neutral-950 text-xs font-bold uppercase tracking-[0.2em] hover:bg-sky-300 transition-all shadow-sm shadow-sky-500/20 flex items-center gap-2"
               >
                 <PhoneCall size={14} />
                 <span>Call Dispatch: (800) 555-0199</span>

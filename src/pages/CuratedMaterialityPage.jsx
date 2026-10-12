@@ -173,7 +173,7 @@ export default function CuratedMaterialityPage() {
             ].map((card, idx) => (
               <div key={idx} className="group rounded-2xl overflow-hidden border border-[var(--border-color)] bg-[var(--bg-card)] flex flex-col justify-between">
                 <div className="relative aspect-[4/3] overflow-hidden bg-neutral-800">
-                  <img src={card.src} alt={card.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-95" />
+                  <img src={card.src} alt={card.title} className="w-full h-full object-cover group- transition-transform duration-500 filter brightness-95" />
                 </div>
                 <div className="p-4 space-y-1">
                   <h4 className="text-sm font-serif text-white">{card.title}</h4>

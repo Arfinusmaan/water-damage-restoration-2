@@ -1,4 +1,4 @@
-// AQUAVANT RESTORATION — Service Architecture & Engineering Data
+// AQUAVANT RESTORATION  -  Service Architecture & Engineering Data
 
 export const SERVICES = [
   {
@@ -53,7 +53,7 @@ export const SERVICES = [
     equipmentUsed: ['Submersible High-Flow Sump Extractors', 'Rover Heavy-Duty Ride-on Pad Extractors', 'Truck-Mounted Vacuum Systems', 'Hydro-X Extreme Suction Units'],
     safetyPrecautions: [
       'Do not walk through standing water without slip-resistant rubber safety boots.',
-      'Do not attempt to use standard household vacuum cleaners — severe electrocution hazard.',
+      'Do not attempt to use standard household vacuum cleaners  -  severe electrocution hazard.',
       'Keep children and pets away from wet rooms until safety clearance is established.'
     ],
     faqs: [
@@ -160,7 +160,7 @@ export const SERVICES = [
     category: 'Applied Psychrometry',
     tagline: 'Engineered Moisture Removal',
     ctaText: 'LEARN ABOUT STRUCTURAL DRYING',
-    summary: 'Structural drying is not guesswork; it is applied physics. AquaVant utilizes psychrometric science — calculating vapor pressure differentials, dew point temperatures, and grains per pound (GPP) — to create the ideal atmospheric conditions that pull bound moisture out of framing, subfloors, and concrete.',
+    summary: 'Structural drying is not guesswork; it is applied physics. AquaVant utilizes psychrometric science  -  calculating vapor pressure differentials, dew point temperatures, and grains per pound (GPP)  -  to create the ideal atmospheric conditions that pull bound moisture out of framing, subfloors, and concrete.',
     workflowPhases: [
       { step: '01', name: 'Psychrometric Baseline Calculation', desc: 'Measuring outdoor vs indoor temperature, relative humidity, and calculating target GPP (grains per pound) drying metrics.' },
       { step: '02', name: 'Controlled Airflow Distribution', desc: 'Strategic placement of high-velocity axial air movers at 45-degree angles to break the stagnant boundary layer of air on wet surfaces.' },

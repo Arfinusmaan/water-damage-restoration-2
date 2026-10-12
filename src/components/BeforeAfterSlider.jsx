@@ -41,7 +41,7 @@ export default function BeforeAfterSlider({
   }, []);
 
   return (
-    <div className="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/60 shadow-xl bg-slate-900 select-none">
+    <div className="rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/60 shadow-sm bg-slate-900 select-none">
       <div 
         ref={containerRef}
         className={`relative w-full ${aspectRatio} overflow-hidden cursor-ew-resize`}
@@ -70,7 +70,7 @@ export default function BeforeAfterSlider({
           }}
         >
           <div 
-            className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-slate-950/85 backdrop-blur-md border border-white/20 text-emerald-400 px-2.5 sm:px-3 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-bold tracking-wider uppercase shadow-lg whitespace-nowrap"
+            className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-slate-950/85  border border-white/20 text-emerald-400 px-2.5 sm:px-3 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-bold tracking-wider uppercase shadow-lg whitespace-nowrap"
           >
             {afterLabel}
           </div>
@@ -92,7 +92,7 @@ export default function BeforeAfterSlider({
 
           {/* Before Label Badge (Clipped Strictly inside the Before overlay) */}
           <div 
-            className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-slate-950/85 backdrop-blur-md border border-white/20 text-rose-400 px-2.5 sm:px-3 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-bold tracking-wider uppercase shadow-lg whitespace-nowrap"
+            className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-slate-950/85  border border-white/20 text-rose-400 px-2.5 sm:px-3 py-1 rounded-lg text-[10px] sm:text-xs font-mono font-bold tracking-wider uppercase shadow-lg whitespace-nowrap"
             style={{
               opacity: sliderPosition < 18 ? 0 : 1,
               transition: 'opacity 0.15s ease'
@@ -104,7 +104,7 @@ export default function BeforeAfterSlider({
 
         {/* Layer 4: Draggable Divider Handle */}
         <div 
-          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#0066FF] text-white border-2 border-white flex items-center justify-center shadow-2xl pointer-events-none z-30 transition-transform active:scale-95"
+          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#0066FF] text-white border-2 border-white flex items-center justify-center shadow-sm pointer-events-none z-30 transition-transform active:scale-95"
           style={{ left: `${sliderPosition}%` }}
         >
           <Sliders className="w-4 h-4 sm:w-5 sm:h-5 text-white" />

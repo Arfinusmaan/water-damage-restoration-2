@@ -102,7 +102,7 @@ function GalleryCard({ card, progress, isSpreadActive, isMobile }: any) {
       style={{ zIndex: z }}
     >
       <motion.div
-        className="will-change-transform cursor-pointer pointer-events-auto shadow-2xl shadow-black/80 rounded-md"
+        className="will-change-transform cursor-pointer pointer-events-auto shadow-md shadow-black/60 rounded-md"
         style={{
           width: size.w,
           height: size.h,
@@ -116,7 +116,7 @@ function GalleryCard({ card, progress, isSpreadActive, isMobile }: any) {
           transformOrigin: "center center -50px" 
         }}
       >
-        <div className="group relative h-full w-full overflow-hidden bg-[#181B22] p-2 pb-6 max-md:p-1 max-md:pb-3 rounded-md transition-all duration-500 hover:shadow-blue-500/20 shadow-2xl ring-1 ring-white/10 hover:ring-blue-400/40">
+        <div className="group relative h-full w-full overflow-hidden bg-[#181B22] p-2 pb-6 max-md:p-1 max-md:pb-3 rounded-md transition-all duration-500 shadow-md ring-1 ring-white/10 hover:ring-blue-400/40">
           <div className="relative h-full w-full overflow-hidden rounded-sm bg-neutral-900">
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10 pointer-events-none" />
             <img
